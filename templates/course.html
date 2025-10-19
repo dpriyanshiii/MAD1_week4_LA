@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details</title>
+</head>
+<body>
+    <h1>Course Details</h1>
+    
+    <table border="2" id="course-details-table">
+        <tr>
+            <th>Average Marks</th>
+            <th>Maximum Marks</th>
+        </tr>
+        <tr>
+            <td>{{ average_marks }}</td>
+            <td>{{ maximum_marks }}</td>
+        </tr>
+    </table>
+    
+    <br>
+    
+    {% if plot_filename %}
+    <img src="{{ plot_filename }}" alt="Marks Histogram for Course {{ course_id }}">
+    {% endif %}
+    
+    <br><br>
+    <a href="/">Go Back to Home</a>
+</body>
+</html>
